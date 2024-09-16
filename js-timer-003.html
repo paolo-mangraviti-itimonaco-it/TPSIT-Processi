@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timer in Javascript</title>
+    </head>
+    <body>
+        
+        <script>
+            scritturaMessaggio("Inizio"," pausa a 2000");
+            pausaBloccante(2000);
+            scritturaMessaggio("Fine"," pausa a 2000");
+            
+            scritturaMessaggio("Inizio"," pausa a 1000");
+            pausaBloccante(1000);
+            scritturaMessaggio("Fine"," pausa a 1000");
+            
+            function scritturaMessaggio(a, b) {
+                console.log(a);
+                console.log(b);
+            }
+            
+            function pausaBloccante(t)
+            {
+                const date = Date.now();
+                let currentDate = null;
+                do {
+                  currentDate = Date.now();
+                } while (currentDate - date < t);
+            }
+        </script>
+    </body>
+</html>
+
